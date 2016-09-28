@@ -6,7 +6,8 @@ var app = express();
 
 
 
-var article1={
+var articles={
+'article1':{
     title:'harsha163 | article-1',
     heading:'article-1',
     date:'sept 28, 2016',
@@ -19,6 +20,36 @@ var article1={
             <p>
                 The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.
             </p>`
+},
+'article3':{
+    title:'harsha163 | article-3',
+    heading:'article-3',
+    date:'sept 28, 2016',
+    content:`<p>
+                The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.
+            </p>
+            <p>
+                The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.
+            </p>
+            <p>
+                The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.
+            </p>`
+},
+'article2':{
+    title:'harsha163 | article-2',
+    heading:'article-2',
+    date:'sept 28, 2016',
+    content:`<p>
+                The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.
+            </p>
+            <p>
+                The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.
+            </p>
+            <p>
+                The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.
+            </p>`
+}
+
 };
 
 function createTemplate(data){
@@ -79,17 +110,11 @@ app.get('/', function (req, res) {
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-app.get('/article-1', function(req, res){
-   res.send(createTemplate(article1));
+app.get('/:articleName', function(req, res){
+    var articleName = req.params.articleName;
+   res.send(createTemplate(articles[articleNaame]));
 });
 
-app.get('/article-2', function(req, res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-2.html'));
-});
-
-app.get('/article-3', function(req, res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-3.html'));
-});
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
