@@ -7,7 +7,7 @@ var app = express();
 
 
 var articles={
-'article1':{
+'article-1':{
     title:'harsha163 | article-1',
     heading:'article-1',
     date:'sept 28, 2016',
@@ -21,7 +21,7 @@ var articles={
                 The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.
             </p>`
 },
-'article3':{
+'article-3':{
     title:'harsha163 | article-3',
     heading:'article-3',
     date:'sept 28, 2016',
@@ -35,7 +35,7 @@ var articles={
                 The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.The content.
             </p>`
 },
-'article2':{
+'article-2':{
     title:'harsha163 | article-2',
     heading:'article-2',
     date:'sept 28, 2016',
