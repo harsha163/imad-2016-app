@@ -13,11 +13,11 @@ madi.onclick = function(){
 };
 var counter=0;
 var sp= document.getElementById("count'");
-var button =document.getElementById("ctr");
+var button =document.getElementById("counter");
 button.onclick = function(){
     
     
     counter=counter+1;
     
-    sp.innerHtml= counter.toString();
+    sp.innerHTML= counter.toString();
 };
