@@ -17,5 +17,5 @@ button.onclick = function(){
     
     counter=counter+1;
     var sp= document.getElementById('count');
-    sp.innerHtml= counter;
+    sp.innerHtml= counter.toString();
 }
