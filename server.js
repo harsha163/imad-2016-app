@@ -112,7 +112,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 var names=[];
-app.get('/submit-name/', function(req, res){
+app.get('/submit-name/:name', function(req, res){
     names.push(req.params.name);
     res.send(JSON.stringify(names));
 });
