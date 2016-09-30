@@ -11,11 +11,13 @@ madi.onclick = function(){
     
     var interval = setInterval(moveRight,40);
 };
+var counter=0;
+var sp= document.getElementById('count');
 var button =document.getElementById('ctr');
 button.onclick = function(){
     
     
     counter=counter+1;
-    var sp= document.getElementById('count');
+    
     sp.innerHtml= counter.toString();
-}
+};
