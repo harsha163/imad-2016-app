@@ -11,7 +11,7 @@ madi.onclick = function(){
     
     var interval = setInterval(moveRight,40);
 };
-var button =document.getElementById('counter');
+var button =document.getElementById('ctr');
 button.onclick = function(){
     
     
