@@ -51,7 +51,7 @@ submitButon.onclick = function(){
             }
         }
     };
-    req.open('GET',"http://harsha163.imad.hasura-app.io/submit-name?nae="+nameg,true);
+    req.open('GET',"http://harsha163.imad.hasura-app.io/submit-name?name="+nameg,true);
     req.send(null);
    
 };
