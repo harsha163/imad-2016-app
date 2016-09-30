@@ -11,11 +11,12 @@ madi.onclick = function(){
     
     var interval = setInterval(moveRight,40);
 };
-var req = new XMLHttpRequest();
+
 
 var sp= document.getElementById("count");
 var button =document.getElementById("counter");
 button.onclick = function(){
+    var req = new XMLHttpRequest();
     req.onreadystatechange = function(){
         if(req.readyState===XMLHttpRequest.DONE){
             if(req.status===200){
@@ -31,14 +32,26 @@ button.onclick = function(){
 
 
 var nameIn=document.getElementById('name');
-var nameg = nameIn.value;
+
 var submitButon=document.getElementById("submit");
 submitButon.onclick = function(){
-    var names=['name1','name2','name3'];
-    var list='';
-    for(var i=0;i<names.length;i++){
-        list+='<li>'+names[i]+'</li>';
-    }
-    var ul=document.getElementById('namesList');
-    ul.innerHTML = list;
+    var nameg = nameIn.value;
+    var req = new XMLHttpRequest();
+    req.onreadystatechange = function(){
+        if(req.readyState===XMLHttpRequest.DONE){
+            if(req.status===200){
+                var names=req.responseText;
+                names=JSON.parse(names);
+                var list='';
+                for(var i=0;i<names.length;i++){
+                    list+='<li>'+names[i]+'</li>';
+                }
+                var ul=document.getElementById('namesList');
+                ul.innerHTML = list;
+            }
+        }
+    };
+    req.open('GET',"http://harsha163.imad.hasura-app.io/submit-name?nae="+nameg,true);
+    req.send(null);
+   
 };
