@@ -17,7 +17,7 @@ var sp= document.getElementById("count");
 var button =document.getElementById("counter");
 button.onclick = function(){
     req.onreadystatechange = function(){
-        if(req.readyState===XMLHttpRequest.Done){
+        if(req.readyState===XMLHttpRequest.DONE){
             if(req.status===200){
                 var counter = req.responseText;
                 sp.innerHTML = counter.toString();
